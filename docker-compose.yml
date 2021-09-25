@@ -1,19 +1,14 @@
 version: "3"
 services:
-  mongo1:
-    image: mongo
+  mongo:
+    build: .
     ports:
-      - 30001:27017
-    volumes: 
-      - mongo1:/data/db
-      
-  mongo2:
-    image: "mongo"
-    ports:
-      - "30002:27017"
+      - "27017:27017"
     volumes:
-      - mongo2:/data/db
+      - mongodata:/data/db
+    command: mongod --replSet rs1 
+    extra_hosts:
+      - "host1:54.180.115.98"
 
 volumes: 
-  mongo1:
-  mongo2:
+  mongodata:
