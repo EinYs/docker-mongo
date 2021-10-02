@@ -10,6 +10,8 @@ services:
       - "host1:172.31.3.103"
       - "host2:172.31.27.95"
       - "host3:172.31.19.204"
+    command: mongod --replSet rs1
+      
 
 volumes: 
   mongodata:
