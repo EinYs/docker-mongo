@@ -6,9 +6,10 @@ services:
       - "27017:27017"
     volumes:
       - mongodata:/data/db
-    command: mongod --replSet rs1 
     extra_hosts:
-      - "host1:54.180.115.98"
+      - "host1:172.31.3.103"
+      - "host2:172.31.27.95"
+      - "host3:172.31.19.204"
 
 volumes: 
   mongodata:
