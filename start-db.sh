@@ -1,0 +1,1 @@
+docker-compose -f docker-compose.arbiter.yml -f docker-compose.data.yml up -d
