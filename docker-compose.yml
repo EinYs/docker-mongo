@@ -21,10 +21,5 @@ services:
     
 volumes: 
   mongodata:
-    driver: local
-    driver_opts:
-      type: 'none'
-      o: 'bind'
-      device: '/data'
   mongolog:
 
