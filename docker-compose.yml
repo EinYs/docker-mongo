@@ -11,6 +11,9 @@ services:
       - "host1:172.31.1.213"
       - "host2:172.31.27.95"
       - "host3:172.31.19.204"
+      - "rs0.cocoice.icu:172.31.1.213"
+      - "rs1.cocoice.icu:172.31.27.95"
+      - "rs2.cocoice.icu:172.31.19.204"
     command: mongod --replSet rs1 --keyFile ./init/replica.key
     environment: 
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_USER}
