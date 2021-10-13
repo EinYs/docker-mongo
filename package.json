@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dc-data":"docker-compose -f docker-compose.yml -f docker-compose.data.yml",
-    "dc-arbiter":""
+    "dc-data":"docker-compose -f docker-compose.arbiter.yml -f docker-compose.data.yml up -d",
+    "dc-arbiter":"docker-compose up -f docker-compose.arbiter.yml -d"
   },
   "repository": {
     "type": "git",
