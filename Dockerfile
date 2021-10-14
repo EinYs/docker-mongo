@@ -1,5 +1,5 @@
 # dockerfile 
-FROM mongo:5.0.0
+FROM mongo
 WORKDIR /usr/src 
 RUN mkdir configs 
 WORKDIR /usr/src/configs 
