@@ -1,1 +1,1 @@
-docker-compose -f docker-compose.arbiter.yml down
+docker-compose -f docker-compose.default.yml down

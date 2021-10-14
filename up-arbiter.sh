@@ -1,1 +1,1 @@
-docker-compose up -f docker-compose.arbiter.yml --build -d
+docker-compose up -f docker-compose.default.yml --build -d

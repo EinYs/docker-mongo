@@ -6,7 +6,6 @@ services:
       - "27017:27017"
     volumes:
       - mongodata:/data/db
-      - mongolog:/var/log/mongodb
     extra_hosts:
       - "host1:172.31.1.213"
       - "host2:172.31.27.95"
@@ -18,8 +17,12 @@ services:
     environment: 
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_USER}
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}
+    logging:
+      driver: "json-file"
+      options:
+          max-size: "10m"
+          max-file: "5"
     
 volumes: 
   mongodata:
-  mongolog:
 
