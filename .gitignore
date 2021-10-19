@@ -1,2 +1,4 @@
 init/replica.key
 tls
+mongo.pem
+*.pem
