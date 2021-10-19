@@ -13,7 +13,7 @@ services:
       - "rs0.cocoice.icu:172.31.1.213"
       - "rs1.cocoice.icu:172.31.27.95"
       - "rs2.cocoice.icu:172.31.19.204"
-    command: mongod --tlsMode allowTLS --tlsCertificateKeyFile ./tls/psmdb1.pem --sslCAFile ./tls/mongodb-server.crt
+    command: mongod --tlsMode requireTLS --tlsCertificateKeyFile /etc/ssl/mongodb.pem
     environment: 
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_USER}
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}
