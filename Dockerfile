@@ -10,7 +10,7 @@ RUN chown 999:999 init/replica.key
 # 파일 소유자를 바꿈.. 이게 있어야 정상 작동하는데 뭔 뜻인지 모르겠음
 
 COPY mongo.pem /etc/ssl/mongo.pem
-RUN chmod 600 /etc/ssl/mongodb.pem
-RUN chown 999:999 /etc/ssl/mongodb.pem
+RUN chmod 600 /etc/ssl/mongo.pem
+RUN chown 999:999 /etc/ssl/mongo.pem
 # RUN chmod +x init/setup.sh 
 # CMD ["sh", "/usr/src/configs/init/setup.sh"]
